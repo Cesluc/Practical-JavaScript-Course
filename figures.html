@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometric Figures | Practice Course JS </title>
+</head>
+<body>
+    <header>
+        <h1>
+            Geometric Figures
+        </h1>
+
+        <p> This is the first task of the practical JS course</p>
+    </header>
+    
+    <section>
+        <h2> Calculate the area and perimeter of a Square</h2>
+        <form>
+            <label for="SquareInput">
+                Write the lenght of each side of the Square
+            </label>
+            <input id ="SquareInput"type="number"/><p></p>
+
+            <button type="button" onclick="calculatePerimeterSquare()">
+                Calculate the perimeter.
+            </button>
+            <button type="button" onclick="calculateAreaSquare()">
+                Calculate the Area
+            </button>
+        </form>
+
+
+        <h2> Calculate the area and perimeter of a Triangle</h2>
+        <form>
+            <label for="SideInput1">
+                Lenght of the 1st side of the triangle
+            </label>
+            <input id ="SideInput1"type="number"/><p></p>
+            <label for="SideInput2">
+                Lenght of the 2nd side of the triangle
+            </label>
+            <input id ="SideInput2"type="number"/><p></p>
+            <label for="BaseInput">
+                Lenght of the base of the triangle
+            </label>
+            <input id ="BaseInput"type="number"/><p></p>
+
+            <label for="HeightInput">
+                Lenght of the height of the triangle
+            </label>
+            <input id ="HeightInput"type="number"/><p></p>
+
+            <button type="button" onclick="calculatePerimeterTriangle()">
+                Calculate the tri perimeter.
+            </button>
+            <button type="button" onclick="calculateAreaTriangle()">
+                Calculate the tri area.
+            </button>
+        </form>
+        
+        <!--Circle-->
+
+        <h2> Calculate the area and perimeter of a Circle</h2>
+        <form>
+            <label for="SquareInput">
+                Write the radius of the circle
+            </label>
+            <input id ="CircleInput"type="number"/><p></p>
+
+            <button type="button" onclick="calculatePerimeterCircle()">
+                Calculate Circle perimeter.
+            </button>
+            <button type="button" onclick="calculateAreaCircle()">
+                Calculate Circle Area
+            </button>
+        </form>
+
+
+    </section>
+
+    <script src="./figures.js"></script>
+</body>
+</html>
