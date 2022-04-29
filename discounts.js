@@ -16,32 +16,21 @@ function ButtonPriceDiscount (){
     const inputCoupon = document.getElementById("InputCoupon");
     const couponValue = inputCoupon.value;
 
-    let discount;
+    const isCouponValueValid = function (coupon){
+        return coupon.name === couponValue;
+    };
 
-    // switch (couponValue){
-    //     case coupons [0]: // get_your_discount
-    //         discount = 15;
-    //     case coupons [1]: // april30
-    //         discount = 30;
-    //     case coupons [2]: // sales2022
-    //         discount = 25;
-    // }
+    const userCoupon = coupons.find(isCouponValueValid);
 
-    if (!coupons.includes (couponValue)){
-        alert("The coupon "+ couponValue + " is not valid");
-    } else if (couponValue === "get_your_discount"){
-        discount = 15;
-    } else if (couponValue === "april30"){
-        discount = 30;
-    } else if (couponValue === "sales2022"){
-        discount = 25;
-    }
+    if (!userCoupon){
+        alert ("The Coupon "+ couponValue + " is not Valid!");
+    } else {
+        const discount = userCoupon.discount;
+        const priceWithDiscount = calculatePriceWithDiscount(priceValue,discount);
 
-    const priceWithDiscount = calculatePriceWithDiscount(priceValue,discount);
-
-    const resultP = document.getElementById("ResultP")
+        const resultP = document.getElementById("ResultP")
     resultP.innerText = "The price with discount is: " + priceWithDiscount;
-
+    }
 }
 
 
@@ -53,8 +42,17 @@ function ButtonPriceDiscount (){
 // }):
 
 const coupons = [
-    "get_your_discount",
-    "april30",
-    "sales2022"
+    {
+        name:"get_your_discount",
+        discount: 15,
+    },
+    {
+        name:"april30",
+        discount: 30,
+    },
+    {
+        name:"sales2022",
+        discount: 25,
+    },
 ];
 
