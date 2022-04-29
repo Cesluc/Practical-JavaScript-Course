@@ -18,13 +18,23 @@ function ButtonPriceDiscount (){
 
     let discount;
 
-    switch (couponValue){
-        case coupons [0]: // get_your_discount
-            discount = 15;
-        case coupons [1]: // april30
-            discount = 30;
-        case coupons [2]: // sales2022
-            discount = 25;
+    // switch (couponValue){
+    //     case coupons [0]: // get_your_discount
+    //         discount = 15;
+    //     case coupons [1]: // april30
+    //         discount = 30;
+    //     case coupons [2]: // sales2022
+    //         discount = 25;
+    // }
+
+    if (!coupons.includes (couponValue)){
+        alert("The coupon "+ couponValue + " is not valid");
+    } else if (couponValue === "get_your_discount"){
+        discount = 15;
+    } else if (couponValue === "april30"){
+        discount = 30;
+    } else if (couponValue === "sales2022"){
+        discount = 25;
     }
 
     const priceWithDiscount = calculatePriceWithDiscount(priceValue,discount);
