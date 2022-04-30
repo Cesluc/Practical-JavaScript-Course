@@ -16,33 +16,37 @@ const list1 = [
    // 800,
     4000000,
 ];
+function calculateMedian(list){
 
-const halfList = parseInt(list1.length/2);
+    const halfList = parseInt(list.length/2);
 
-function isEven(amountElements){
-    if (amountElements %2 === 0){ //using the module 
-        return true;
-    } else {
-        return false;
+    function isEven(amountElements){
+        if (amountElements % 2 === 0){ //using the module 
+            return true;
+        } else {
+            return false;
+        }
     }
-}
 
-let medianResult;
+    let medianResult;
 
-// validating if our list is even
-if (isEven(list1.length)){
-    const element1 = list1[halfList - 1];
-    const element2 = list1[halfList];
+    // validating if our list is even
+    if (isEven(list.length)){
+        const element1 = list[halfList - 1];
+        const element2 = list[halfList];
 
-    const average1_2 = caulculateArithmeticMean ([element1, element2]);
+        const average1_2 = caulculateArithmeticMean ([element1, element2]);
 
-    medianResult = average1_2;
+        medianResult = average1_2;
+        return medianResult;
 
-    // We need two elements
-    // -> the average
-    // -> the median
-} else {
-    medianResult = list1[halfList]
+        // We need two elements
+        // -> the average
+        // -> the median
+    } else {
+        medianResult = list1[halfList]
+        return medianResult;
+    }
 }
 
 //Create function calculateMedian()
