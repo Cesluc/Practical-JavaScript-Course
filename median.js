@@ -18,6 +18,12 @@ const list1 = [
 ];
 function calculateMedian(list){
 
+    function compareNum (a,b){
+        return a - b;
+    }
+
+    list.sort(compareNum);
+
     const halfList = parseInt(list.length/2);
 
     function isEven(amountElements){
